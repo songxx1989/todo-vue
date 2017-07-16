@@ -18,25 +18,21 @@
     },
     methods: {
       saveQingdan(content){
-        axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
-   /*     axios.post('http://127.0.0.1:8081/qingdan', {
-          name: content,
-          status: 0
-        })
-          .then(function (resp) {
-            console.log(resp);
-          });*/
-
-        axios({
-          method: 'post',
+        $.ajax({
           url: 'http://127.0.0.1:8081/qingdan',
+          type: 'post',
           data: {
             name: content,
             status: 0
+          },
+          dataType: 'json',
+          success: function (resp) {
+            console.log(resp);
+          },
+          error: function (err) {
+            console.log(err);
           }
-        }).then(function (resp) {
-          console.log(resp);
-        });;
+        });
       }
     }
   }
