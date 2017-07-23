@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import Tinput from './Tinput'
+  import Tinput from './TodoInput'
 
   export default {
     name: 'todo-app',

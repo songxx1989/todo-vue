@@ -1,6 +1,6 @@
 <template>
   <div class="qingdan">
-    <tinput placeholder="创建清单" @save="saveQingdan"></tinput>
+    <todo-input placeholder="创建清单" @save="saveQingdan"></todo-input>
     <ul class="qingdan-list">
       <qingdan-item v-for="item in todoList" :key="item.id" :qingdan="item"></qingdan-item>
     </ul>
@@ -8,13 +8,13 @@
 </template>
 
 <script>
-  import Tinput from './Tinput'
+  import TodoInput from './TodoInput'
   import QingdanItem from './QingdanItem'
 
   export default {
     name: 'qingdan-list',
     components: {
-      Tinput, QingdanItem
+      TodoInput, QingdanItem
     },
     data: function () {
       return {

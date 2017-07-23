@@ -1,12 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Join from '@/components/Join'
-import QingdanList from '@/components/QingdanList'
+import User from '@/components/User'
+import Todo from '@/components/Todo'
+import QingdanDetail from '@/components/QingdanDetail'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {path: '/join',component: Join},
+    {path: '/user', component: User},
+    {
+      path: '/todo', component: Todo,
+      children: [
+        {
+          path: 'qingdan/:id',
+          component: QingdanDetail
+        }
+      ]
+    },
   ]
 })

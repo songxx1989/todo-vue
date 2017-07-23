@@ -7,7 +7,7 @@
 
 <script>
   export default {
-    name: 'tinput',
+    name: 'todo-input',
     props: ['placeholder'],
     data () {
       return {
@@ -25,5 +25,13 @@
 </script>
 
 <style scoped>
-
+  input{
+    width: 200px;
+    border:none;
+    background: #f1f1f1;
+    padding:5px 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+    outline:none;
+  }
 </style>
