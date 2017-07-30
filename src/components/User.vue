@@ -23,7 +23,7 @@
         <td>{{item.password}}</td>
         <td>{{item.createTime}}</td>
         <td>
-          <a href="javascript:;" @click="delUser(item.id)">X</a>
+          <a href="javascript:;" @click="delUser(item.id)">删除</a>
         </td>
       </tr>
     </table>

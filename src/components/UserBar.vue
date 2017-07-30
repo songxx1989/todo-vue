@@ -44,7 +44,7 @@
         var selectedUsers = this.selectedUserList.join();
         var self = this;
         $.ajax({
-          url: 'http://127.0.0.1:8081/qingdan/' + this.id + '/' + selectedUsers,
+          url: 'http://127.0.0.1:8081/inventory/' + this.id + '/' + selectedUsers,
           type: 'patch',
           dataType: 'json',
           success: function (resp) {

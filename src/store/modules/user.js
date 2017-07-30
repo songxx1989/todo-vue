@@ -2,11 +2,11 @@ import user from '../../api/user'
 import * as types from '../mutation_types'
 
 const state = {
-  all: []
+  users: []
 }
 
 const getters = {
-  allUsers: state => state.all
+  users: state => state.users
 }
 
 const actions = {
@@ -29,13 +29,13 @@ const actions = {
 
 const mutations = {
   [types.RECEIVE_USERS](state, {users}) {
-    state.all = users
+    state.users = users
   },
   [types.SAVE_USER_SUCCESS](state, {newUser}) {
-    state.all.push(newUser)
+    state.users.push(newUser)
   },
   [types.DEL_USER_SUCCESS](state, {id}) {
-    state.all.splice(state.all.findIndex(item => item.id == id), 1)
+    state.users.splice(state.users.findIndex(item => item.id == id), 1)
   }
 }
 

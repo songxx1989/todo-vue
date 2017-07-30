@@ -1,15 +1,16 @@
 <template>
   <div class="todo">
-    <qingdan-list></qingdan-list>
+    <inventory-list></inventory-list>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import QingdanList from './QingdanList'
+  import InventoryList from './InventoryList'
+
   export default {
     name:'todo',
-    components:{QingdanList},
+    components:{InventoryList},
 
   }
 </script>
